@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #4dcbff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InformationController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #000;">
+         <children>
+            <Text fill="#4dcbff" layoutX="109.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="more informasion">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="phoneField" layoutX="150.0" layoutY="108.0" promptText="phone number" style="-fx-border-color: #4dcbff;" />
+            <RadioButton fx:id="female" layoutX="167.0" layoutY="162.0" mnemonicParsing="false" />
+            <RadioButton fx:id="male" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" />
+            <Text fill="#00eeff" layoutX="286.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="male" />
+            <Text fill="#4dcbff" layoutX="193.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="female" />
+            <ImageView fitHeight="18.0" fitWidth="34.0" layoutX="145.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/famelicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="242.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/blackicon.png" />
+               </image>
+            </ImageView>
+            <Text fill="#4dcbff" layoutX="32.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if you want to set image please write its path" />
+            <Circle fx:id="circle" fill="#4dcbff" layoutX="223.0" layoutY="284.0" radius="59.0" stroke="BLACK" strokeType="INSIDE" />
+            <TextField fx:id="imagePath" layoutX="32.0" layoutY="363.0" onMouseClicked="#clickedField" prefHeight="25.0" prefWidth="190.0" promptText="image path" style="-fx-border-color: #4dcbff;" />
+            <Button layoutX="234.0" layoutY="363.0" mnemonicParsing="false" onAction="#setImage" style="-fx-background-color: #000; -fx-border-color: #4dcbff;" text="set Image" textFill="#4dcbff" />
+            <Text fx:id="notFound" fill="RED" layoutX="32.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cant find image please check the path !!" visible="false" />
+            <Button layoutX="193.0" layoutY="419.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: #000; -fx-border-color: #4dcbff;" text="sign Up" textFill="#4dcbff" />
+            <Text fill="#4dcbff" fontSmoothingType="LCD" layoutX="38.0" layoutY="437.0" onMouseClicked="#signPage" strokeType="OUTSIDE" strokeWidth="0.0" text="back" wrappingWidth="44.537109375">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
+            <StackPane fx:id="processPane" layoutX="25.0" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: #000;" visible="false">
+               <children>
+                  <ProgressIndicator blendMode="LIGHTEN" cache="true" cacheHint="SCALE" depthTest="DISABLE" prefHeight="107.0" prefWidth="116.0" />
+                  <Text fill="#4dcbff" strokeType="OUTSIDE" strokeWidth="0.0" text="please wait" wrappingWidth="93.14611053466797">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </StackPane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

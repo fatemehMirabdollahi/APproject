@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EnterController">
+   <children>
+      <ImageView fx:id="gamilIcon" fitHeight="500.0" fitWidth="450.0" layoutY="81.0" onMouseClicked="#enter" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/icon-animation.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

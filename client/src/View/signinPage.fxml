@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #4dcbff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SigninController">
+   <children>
+      <Pane fx:id="signin_Pane" layoutX="50.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #000;">
+         <children>
+            <Text fill="#4dcbff" layoutX="121.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sign in" wrappingWidth="103.7349853515625">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="wrongPass" fill="#e52525" layoutX="109.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wrong Pass or user !!" visible="false" />
+            <Text fx:id="notComplete" fill="#e52525" layoutX="109.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="not Complete !!" visible="false" />
+            <TextField fx:id="userField" layoutX="103.0" layoutY="233.0" onMouseClicked="#clickedField" prefWidth="140.0" promptText="username" style="-fx-border-color: #4dcbff;" />
+            <TextField fx:id="passVisibleField" layoutX="103.0" layoutY="279.0" onMouseClicked="#clickedField" prefWidth="140.0" promptText="password" style="-fx-border-color: #4dcbff;" visible="false" />
+            <PasswordField fx:id="passField" layoutX="103.0" layoutY="279.0" onMouseClicked="#clickedField" prefWidth="140.0" promptText="password" style="-fx-border-color: #4dcbff;" />
+            <ImageView fx:id="hideIcon" fitHeight="27.0" fitWidth="32.0" layoutX="74.0" layoutY="279.0" onMouseClicked="#showPass" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/hidepass.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="showIcon" fitHeight="27.0" fitWidth="27.0" layoutX="74.0" layoutY="279.0" onMouseClicked="#hidePass" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Resources/showpass.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="signIn" layoutX="139.0" layoutY="332.0" mnemonicParsing="false" onAction="#signIn" prefHeight="27.0" prefWidth="62.0" style="-fx-background-color: #000; -fx-border-color: #4dcbff;" text="sign in" textFill="#4dcbff" />
+            <Text fill="#f0ff2e" layoutX="121.0" layoutY="388.0" onMouseClicked="#forgetPassPage" strokeType="OUTSIDE" strokeWidth="0.0" text="forget your Pass ??" />
+            <Text fill="#4dcbff" layoutX="109.0" layoutY="404.0" onMouseClicked="#signUpPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an Account?" />
+            <ImageView fx:id="hideIcon1" fitHeight="27.0" fitWidth="32.0" layoutX="251.0" layoutY="233.0" onMouseClicked="#showPass" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/usericon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hideIcon11" fitHeight="27.0" fitWidth="32.0" layoutX="251.0" layoutY="279.0" onMouseClicked="#showPass" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/pass.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="200.0" layoutX="73.0" layoutY="92.0">
+               <image>
+                  <Image url="@../Resources/gmail.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="processPane" layoutX="18.0" layoutY="25.0" prefHeight="450.0" prefWidth="314.0" style="-fx-background-color: #000;" visible="false">
+               <children>
+                  <ProgressIndicator blendMode="LIGHTEN" cache="true" cacheHint="SCALE" depthTest="DISABLE" prefHeight="107.0" prefWidth="116.0" />
+                  <Text fill="#4dcbff" strokeType="OUTSIDE" strokeWidth="0.0" text="please wait" wrappingWidth="93.14611053466797">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </StackPane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
